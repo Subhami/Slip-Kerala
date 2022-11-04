@@ -22,8 +22,8 @@
          with:
            python-version: '3.9'
            cache: 'pip'
-        -run: pip install -r requiremetns.txt
-        
+        -run: pip install -r requirements.txt
+
         -id: jupyter
          name: Jupyter Notebook Execution
          run: jupyter execute  slip-k.ipynb
