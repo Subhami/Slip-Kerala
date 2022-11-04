@@ -13,18 +13,18 @@
 
       steps:
         - id: repo
-         name: Slip-Kerala
-         uses: actions/checkout@v2
+          name: Repo Checkout
+          uses: actions/checkout@v2
 
         - id: python
-         name: Python Setup and Packages Installation
-         uses: actions/setup-python@v2
-         with:
-           python-version: '3.9'
-           cache: 'pip'
+          name: Python Setup and Packages Installation
+          uses: actions/setup-python@v2
+          with:
+            python-version: '3.9'
+            cache: 'pip'
         - run: pip install -r requirements.txt
 
         - id: jupyter
-         name: Jupyter Notebook Execution
-         run: jupyter execute  slip-k.ipynb
-         shell: bash
+          name: Jupyter Notebook Execution
+          run: jupyter execute  slip-k.ipynb
+          shell: bash
