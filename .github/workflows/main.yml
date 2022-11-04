@@ -13,7 +13,7 @@
 
       steps:
         -id: repo
-         name: Repo Checkout
+         name: Slip-Kerala
          uses: actions/checkout@v2
 
         -id: python
