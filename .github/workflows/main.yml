@@ -12,19 +12,19 @@
       runs-on: ubuntu-latest
 
       steps:
-        -id: repo
+        - id: repo
          name: Slip-Kerala
          uses: actions/checkout@v2
 
-        -id: python
+        - id: python
          name: Python Setup and Packages Installation
          uses: actions/setup-python@v2
          with:
            python-version: '3.9'
            cache: 'pip'
-        -run: pip install -r requirements.txt
+        - run: pip install -r requirements.txt
 
-        -id: jupyter
+        - id: jupyter
          name: Jupyter Notebook Execution
          run: jupyter execute  slip-k.ipynb
          shell: bash
